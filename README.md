@@ -54,10 +54,16 @@ To use the OCR functionality in python by following these steps:
     ```
 2. Load an image and extract text:
     ```python
-    myconfig = "" // Set the desired page segmentation mode
+    myconfig = r"--psm 3 --oem 3" # Set the desired configuration
     image = PIL.Image.open('path_to_image')
     text = pytesseract.image_to_string(image, config=myconfig)
-    print(text)
+
+    print(text) # Display the text
+    ```
+
+3. Run the following command (It will diplay the text withing the image in the CLI).
+    ```sh
+    python main.py
     ```
 
 ## Contributing
